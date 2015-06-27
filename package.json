@@ -1,0 +1,16 @@
+{
+  "name": "Cursors",
+  "version": "0.1.0",
+  "author": "Floens",
+  "description": "Remote cursors.",
+  "repository": {},
+  "dependencies": {
+    "ws": "0.7.2",
+    "msgpack-js": "0.3.0",
+    "gulp": "3.9.0",
+    "gulp-concat": "2.6.0",
+    "gulp-uglify": "1.2.0"
+  },
+  "devDependencies": {},
+  "license": "Apache2"
+}
