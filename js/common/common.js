@@ -132,6 +132,10 @@ global.ColorPacket = function(id, color) {
 }
 
 
+global.isNumber = function(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
 global.isInt = function(n) {
    return typeof n === 'number' && n % 1 == 0;
 }
@@ -172,8 +176,8 @@ global.Protocol = {
             break;
             case Protocol.POSITION:
                 if (!isInt(raw[i + 1]) || raw[i + 1] < 0) throw new Error('invalid');
-                if (!isInt(raw[i + 2])) throw new Error('invalid');
-                if (!isInt(raw[i + 3])) throw new Error('invalid');
+                if (!isNumber(raw[i + 2])) throw new Error('invalid');
+                if (!isNumber(raw[i + 3])) throw new Error('invalid');
                 list.push(new PositionPacket(raw[i + 1], raw[i + 2], raw[i + 3]));
                 i += 4;
             break;
